@@ -43,7 +43,7 @@
     </div>
     <form id="votingForm">
       <input type="text" id="candidateNumber" placeholder="Número do Candidato">
-      <input type="password" id="password" placeholder="Digite sua senha">
+      <input type="password" id="password" placeholder="Senha">
       <div class="keypad">
         <button type="button" class="key" onclick="addNumber(1)">1</button>
         <button type="button" class="key" onclick="addNumber(2)">2</button>
@@ -59,6 +59,7 @@
       </div>
       <button type="submit">Votar</button>
     </form>
+    <button onclick="redirectToResultsPage()">Ver Votos</button>
   </div>
   <script src="script.js"></script>
 </body>

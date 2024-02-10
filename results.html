@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultados da Votação</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Resultados da Votação</h2>
+    <div id="results"></div>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    window.onload = function() {
+      displayResults();
+    };
+
+    function displayResults() {
+      const votes = JSON.parse(getCookie('votes'));
+      const resultsDiv = document.getElementById('results');
+      for (const candidate in votes) {
+        const p = document.createElement('p');
+        p.textContent = `Candidato: ${candidate}, Votos: ${votes[candidate]}`;
+        resultsDiv.appendChild(p);
+      }
+    }
+  </script>
+</body>
+</html>
