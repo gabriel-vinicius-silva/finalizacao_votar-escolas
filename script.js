@@ -25,7 +25,8 @@ votingForm.addEventListener('submit', function(event) {
     // Se sim, então pedimos a senha
     if (password === 'g') {
       // Verificamos a senha
-      alert('Senha correta. Voto computado para o candidato ' + candidateNumber + '!');
+      const candidateName = document.querySelector(`.card:nth-of-type(${candidateNumber}) p:nth-of-type(2)`).textContent.trim().split(": ")[1]; // Obtém o nome do candidato
+      alert(`Senha correta. Voto computado para o candidato ${candidateName}!`); // Exibe a mensagem com o nome do candidato
       window.location.reload();
     } else {
       // Senha incorreta
