@@ -82,3 +82,14 @@ button[type="submit"] {
   pointer-events: none; /* Impede eventos de mouse e teclado */
   background-color: #f2f2f2; /* Altera a cor de fundo para indicar que não é editável */
 }
+.card img {
+  max-width: 50px; /* Defina o tamanho máximo da largura */
+  max-height: 30%; /* Defina o tamanho máximo da altura */
+}
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px; /* Reduza o preenchimento */
+  margin: 0 10px;
+}
